@@ -1,15 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import Header from './Header'
+import Main from './Main'
+import Side from './Side'
+import Footer from './Footer'
 
-class App extends React.Component {
-  constructor(props){
-    super(props);
-  }
+function App(){
+  const [count, updateCount] = useState(0)
+  useEffect(() => {
+    console.log(`count: ${count}`)
+  })
 
-  render(){
-    return (
-      <div>test</div>
-    )
-  }
+  return (
+    <div id="app">
+      <Header />
+      <div id="content">
+        <Main />
+        <Side />
+      </div>
+      <Footer />
+    </div>
+  )
 }
 
 export default App;
