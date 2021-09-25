@@ -1,14 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Header from './Header'
 import Main from './Main'
 import Side from './Side'
 import Footer from './Footer'
 
 function App(){
-  const [count, updateCount] = useState(0)
-  useEffect(() => {
-    console.log(`count: ${count}`)
-  })
 
   return (
     <div id="app">
